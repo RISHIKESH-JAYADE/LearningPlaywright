@@ -9,7 +9,7 @@ test('learning Locators', async ({browser,baseURL})=>{
 
     await page.getByRole("link",{name:'Contact'}).click()//new window or tab will be opened.
     
-    await page.waitForURL('**/contact');
+    await page.waitForURL('**/contact'); //js regex Literal notation: Enclose the pattern in forward slashes (/)
     console.log(page.url());
     await expect(page.getByRole('heading', { name: 'Contact page for Automation Testing Practice' })).toBeVisible();
     //page.pause()

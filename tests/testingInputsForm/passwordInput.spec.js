@@ -19,6 +19,7 @@ test.describe('text box testing', ()=>{
             const outputbox = page.locator('#output-password');
             const displayBtn = page.locator('#btn-display-inputs');
 
+            //await inputbox.fill(String(test_case.value));
             await inputbox.fill(String(test_case.value));
             await displayBtn.click();
 
